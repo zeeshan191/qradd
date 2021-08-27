@@ -51,6 +51,23 @@ export default function Basket(props) {
               </div>
             </div>
             <hr />
+            <div className="mb-3">
+            <label className="form-label">Your Name</label>
+            <input type="text" className="form-control"  placeholder="Name"/>
+          </div>
+          <div className="mb-3">
+          <label  className="form-label">Phone Number</label>
+          <input type="number" className="form-control"  placeholder="Mobile Number"/>
+        </div>
+        <div className="mb-3">
+        <label className="form-label">Roam Number</label>
+        <input type="number" className="form-control" id="exampleFormControlInput1" placeholder="Number"/>
+      </div>
+          <div className="mb-3">
+            <label for="exampleFormControlTextarea1" className="form-label">Comments</label>
+            <textarea className="form-control" rows="3"></textarea>
+          </div>
+
             <div className="row">
             <button type="button" className="btn btn-success" onClick={() => alert('Implement Checkout!')}> Checkout</button>
             
