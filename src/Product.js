@@ -12,7 +12,7 @@ function Products(props) {
                 <div className="col-md-12" >
                     <h3 >{product.name}</h3>
                                   </div>
-                <div className="col-md-3" style={{marginLeft: '268px'
+                <div className="col-md-3" style={{marginLeft: '185px'
                     ,marginTop: '-29px'}}>
                     <span>Rs {product.price}</span>
                 </div>
