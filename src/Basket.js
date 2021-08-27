@@ -7,14 +7,14 @@ export default function Basket(props) {
   const shippingPrice = itemsPrice > 2000 ? 0 : 20;
   const totalPrice = itemsPrice + taxPrice + shippingPrice;
   return (
-    <aside className="block col-1">
-      <h2>Cart Items</h2>
+    <aside className="block col-12">
+      <h2>Your Selected Items</h2>
       <div>
         {cartItems.length === 0 && <div>Cart is empty</div>}
         {cartItems.map((item) => (
           <div key={item.id} className="row">
-            <div className="col-2">{item.name}</div>
-            <div className="col-2">
+            <div className="col-6">{item.name}</div>
+            <div className="col-6">
               <button onClick={() => onRemove(item)} className="remove">
                 -
               </button>{' '}
@@ -23,7 +23,7 @@ export default function Basket(props) {
               </button>
             </div>
 
-            <div className="col-2 text-right">
+            <div className="col-4 text-right" style={{marginLeft:'261px',marginTop:'-31px'}}>
               {item.qty} x Rs{item.price.toFixed(2)}
             </div>
           </div>
@@ -33,8 +33,8 @@ export default function Basket(props) {
           <>
             <hr></hr>
             <div className="row">
-              <div className="col-2">Items Price</div>
-              <div className="col-1 text-right">Rs{itemsPrice.toFixed(2)}</div>
+              <div className="col-3">Items Price</div>
+              <div className="col-3 text-right"  style={{marginLeft:'260px',marginTop:'-25'}}>Rs{itemsPrice.toFixed(2)}</div>
             </div>
             <div className="row">
               <div className="col-2">Tax Price</div>
