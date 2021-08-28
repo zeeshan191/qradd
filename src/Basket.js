@@ -17,7 +17,7 @@ export default function Basket(props) {
   //const [foodPrice, setFoodPrice] = useState();
 
 
-  const [DnNotice, setDnNotice] = useState();
+  
 
 
 
