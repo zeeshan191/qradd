@@ -64,7 +64,7 @@ export default function Basket(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://entemadb.entema-software.com/insertFoodOrderData", {
+      .post("https://entemadb.entema-software.com/insertFoodOrderData", {
         headers: {
           "Access-Control-Allow-Origin": "*",
           "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
