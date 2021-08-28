@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaPlus, FaMinus } from 'react-icons/fa';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
 export default function Basket(props) {
   const { cartItems, onAdd, onRemove } = props;
@@ -19,7 +21,7 @@ export default function Basket(props) {
 
   
 
-
+  const notify = () => toast("Your data is submitted!");
 
   const handleChangeEvent = (e) => {
     //console.log("e : ", e);
@@ -79,6 +81,7 @@ export default function Basket(props) {
       })
       .then((res) => {
         console.log("updated Values Successfully : ", res.data);
+        notify();
         window.location.reload();        
       });
 
@@ -149,8 +152,18 @@ export default function Basket(props) {
             </div>
 
             <div className="row">
-              <button type="submit" className="btn btn-success"> Checkout</button>
-
+              <button  type="submit"  className="btn btn-success"> Checkout</button>
+              <ToastContainer
+              position="top-center"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              />
             </div>
           </>
         )}
