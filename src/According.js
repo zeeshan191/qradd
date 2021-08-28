@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 
 import Chinesericeitems from './Chinesericeitems'
 import Chinesespecialvegetables from './Chinesespecialvegetables'
@@ -12,32 +12,33 @@ import Basket from './Basket'
 function According() {
     const { products } = data;
     const [cartItems, setCartItems] = useState([]);
-  console.log(products);
 
-  const onAdd = (product) => {
-    const exist = cartItems.find((x) => x.id === product.id);
-    if (exist) {
-      setCartItems(
-        cartItems.map((x) =>
-          x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
-        )
-      );
-    } else {
-      setCartItems([...cartItems, { ...product, qty: 1 }]);
-    }
-  };
-  const onRemove = (product) => {
-    const exist = cartItems.find((x) => x.id === product.id);
-    if (exist.qty === 1) {
-      setCartItems(cartItems.filter((x) => x.id !== product.id));
-    } else {
-      setCartItems(
-        cartItems.map((x) =>
-          x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
-        )
-      );
-    }
-  };
+    const onAdd = (product) => {
+        const exist = cartItems.find((x) => x.id === product.id);
+        if (exist) {
+            setCartItems(
+                cartItems.map((x) =>
+                    x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+                )
+            );
+        } else {
+            setCartItems([...cartItems, { ...product, qty: 1 }]);
+        }
+    };
+
+    const onRemove = (product) => {
+        const exist = cartItems.find((x) => x.id === product.id);
+        if (exist.qty === 1) {
+            setCartItems(cartItems.filter((x) => x.id !== product.id));
+        } else {
+            setCartItems(
+                cartItems.map((x) =>
+                    x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
+                )
+            );
+        }
+    };
+    
     return (
         <>
 
@@ -56,8 +57,8 @@ function According() {
                         </h2>
                         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
-                          
-  <Main products={products} onAdd={onAdd} ></Main>
+
+                                <Main products={products} onAdd={onAdd} ></Main>
                             </div>
                         </div>
                     </div>
@@ -69,7 +70,7 @@ function According() {
                         </h2>
                         <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
-<Chinesericeitems/>
+                                <Chinesericeitems />
                             </div>
                         </div>
                     </div>
@@ -81,7 +82,7 @@ function According() {
                         </h2>
                         <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
-<Chinesespecialvegetables/>
+                                <Chinesespecialvegetables />
                             </div>
                         </div>
                     </div>
@@ -93,7 +94,7 @@ function According() {
                         </h2>
                         <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
-<Freshfruitjuices/>
+                                <Freshfruitjuices />
                             </div>
                         </div>
                     </div>
@@ -105,7 +106,7 @@ function According() {
                         </h2>
                         <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
-<Hotbeverages/>
+                                <Hotbeverages />
                             </div>
                         </div>
                     </div>
@@ -117,7 +118,7 @@ function According() {
                         </h2>
                         <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
-<Icecream/>
+                                <Icecream />
                             </div>
                         </div>
                     </div>
@@ -129,14 +130,14 @@ function According() {
                         </h2>
                         <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
-                           <Kadaispecial/>
+                                <Kadaispecial />
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingeight">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseeight" aria-expanded="false" aria-controls="flush-collapseeight">
-                               Meals
+                                Meals
                             </button>
                         </h2>
                         <div id="flush-collapseeight" class="accordion-collapse collapse" aria-labelledby="flush-headingeight" data-bs-parent="#accordionFlushExample">
@@ -154,7 +155,7 @@ function According() {
                         </h2>
                         <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
-                            <Chinesericeitems/>
+                                <Chinesericeitems />
                             </div>
                         </div>
                     </div>
@@ -166,7 +167,7 @@ function According() {
                         </h2>
                         <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
-                            <Chinesericeitems/>
+                                <Chinesericeitems />
                             </div>
                         </div>
                     </div>
@@ -178,7 +179,7 @@ function According() {
                         </h2>
                         <div id="flush-collapseThree1" class="accordion-collapse collapse" aria-labelledby="flush-headingThree1" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
-                            <Chinesericeitems/>
+                                <Chinesericeitems />
                             </div>
                         </div>
                     </div>
@@ -190,7 +191,7 @@ function According() {
                         </h2>
                         <div id="flush-collapseThree21" class="accordion-collapse collapse" aria-labelledby="flush-headingThree21" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
-                            <Chinesericeitems/>
+                                <Chinesericeitems />
                             </div>
                         </div>
                     </div>
@@ -202,7 +203,7 @@ function According() {
                         </h2>
                         <div id="flush-collapseThree23" class="accordion-collapse collapse" aria-labelledby="flush-headingThree23" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
-                            <Chinesericeitems/>
+                                <Chinesericeitems />
                             </div>
                         </div>
                     </div>
@@ -214,7 +215,7 @@ function According() {
                         </h2>
                         <div id="flush-collapseThree24" class="accordion-collapse collapse" aria-labelledby="flush-headingThree24" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
-                            <Chinesericeitems/>
+                                <Chinesericeitems />
                             </div>
                         </div>
                     </div>
@@ -226,7 +227,7 @@ function According() {
                         </h2>
                         <div id="flush-collapseThree5" class="accordion-collapse collapse" aria-labelledby="flush-headingThree5" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
-                            <Chinesericeitems/>
+                                <Chinesericeitems />
                             </div>
                         </div>
                     </div>
@@ -239,7 +240,7 @@ function According() {
                         </h2>
                         <div id="flush-collapseThree6" class="accordion-collapse collapse" aria-labelledby="flush-headingThree6" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
-                            <Chinesericeitems/>
+                                <Chinesericeitems />
                             </div>
                         </div>
                     </div>
@@ -252,7 +253,7 @@ function According() {
                         </h2>
                         <div id="flush-collapseThree7" class="accordion-collapse collapse" aria-labelledby="flush-headingThree7" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
-                            <Chinesericeitems/>
+                                <Chinesericeitems />
                             </div>
                         </div>
                     </div>
@@ -264,7 +265,7 @@ function According() {
                         </h2>
                         <div id="flush-collapseThree8" class="accordion-collapse collapse" aria-labelledby="flush-headingThree8" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
-                            <Chinesericeitems/>
+                                <Chinesericeitems />
                             </div>
                         </div>
                     </div>
@@ -276,7 +277,7 @@ function According() {
                         </h2>
                         <div id="flush-collapseThree10" class="accordion-collapse collapse" aria-labelledby="flush-headingThree10" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
-                            <Chinesericeitems/>
+                                <Chinesericeitems />
                             </div>
                         </div>
                     </div>
@@ -288,19 +289,19 @@ function According() {
                         </h2>
                         <div id="flush-collapseThree11" class="accordion-collapse collapse" aria-labelledby="flush-headingThree11" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
-                            <Chinesericeitems/>
+                                <Chinesericeitems />
                             </div>
-                        </div> 
+                        </div>
                     </div>
-                </div> 
-                
-                <Basket
-          cartItems={cartItems}
-          onAdd={onAdd}
-          onRemove={onRemove}
-        ></Basket>
-                
                 </div>
+
+                <Basket
+                    cartItems={cartItems}
+                    onAdd={onAdd}
+                    onRemove={onRemove}
+                ></Basket>
+
+            </div>
 
 
         </>
